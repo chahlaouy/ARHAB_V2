@@ -1,0 +1,7 @@
+{
+  "name": "arhab",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
