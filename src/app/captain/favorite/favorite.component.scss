@@ -1,0 +1,104 @@
+ion-content{
+    --padding-top: 0px;
+    --padding-bottom: 0px; 
+    --padding-start: 0px;
+    --padding-end: 0px;
+}
+ion-card-content{
+    padding-top: 10px;
+    padding-bottom: 10px; 
+    padding-left: 10px;
+    padding-right: 10px;
+}
+ion-card#wrapper{
+    margin: 8px;
+}
+ion-toolbar{
+    padding: 0px;
+    --padding-top: 0px !important;
+    --background: transparent !important;
+}
+ul{
+    list-style: none;
+}
+#active_icon{
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // box-shadow: 0px 4px 10px rgb(222, 222, 222);
+    background: #ffeec5;
+    border: 1px solid #fccf67;
+    border-radius: 20px;
+}
+#inactive_icon{
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // box-shadow: 0px 4px 10px rgb(222, 222, 222);
+    background: #ffffff;
+  
+    border: 1px solid#d3d3d3;
+    border-radius: 20px;
+}
+#card-transparent{
+    --background: transparent !important;
+    box-shadow: none !important;
+}
+.radiobutton_container
+{
+    height: 30px;
+    line-height: 30px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    padding-left: 40px;
+    cursor: pointer;
+    display: block;
+    position: relative;
+    /* #Bug: Cross Browser */
+    user-select: none;
+}
+
+.radiobutton_container .radiobutton_mark
+{
+    width: 30px;
+    height: 30px;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-color: #eaae1b;
+    box-shadow: inset 0 0px 5px #bf901d;
+    border-radius: 50%;
+    border: 1px solid #bf901d;
+}
+.radiobutton_container:hover input ~ .radiobutton_mark
+{
+    background-color: #F6E05E ;
+}
+.radiobutton_container input:checked ~ .radiobutton_mark
+{
+    background-color: #ededed;
+}
+.radiobutton_container input
+{
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+.radiobutton_container .radiobutton_mark:after
+{
+    display: none;
+    content: "";
+    /*
+    position: absolute;
+    */
+    position: relative;
+}
+.radiobutton_container input:checked ~ .radiobutton_mark:after
+{
+    display: block;
+}

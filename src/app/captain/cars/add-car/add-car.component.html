@@ -1,0 +1,121 @@
+<ion-content [fullscreen]="true" color="warning">
+  <form [formGroup]="userCar" (submit)="onCarSubmit()">
+    <ion-card mode="ios" id="wrapper">
+      <ion-card-content>
+
+        <!-- header -->
+        <ion-header [translucent]="true">
+          <ion-toolbar>
+            <ion-buttons slot="start">
+              <ion-button>
+                <ion-icon name="notifications-outline" color="primary" class="text-xl"></ion-icon>
+              </ion-button>
+            </ion-buttons>
+            <ion-title>{{ title }}</ion-title>
+            <ion-buttons slot="end">
+              <ion-menu-button>
+                <ion-icon name="apps" color="primary" class="text-xl"></ion-icon>
+              </ion-menu-button>
+            </ion-buttons>
+          </ion-toolbar>
+        </ion-header>
+
+        <ion-item class="ion-margin-bottom ion-margin-top" lines="none">
+          <ion-icon name="car-sport" slot="start" size="small" color="dark"></ion-icon>
+          <ion-label>
+            <ul>
+              <li>
+                <div class="text-xl">{{title}}</div>
+              </li>
+              <li><span class="text-note">إضافة سيارة الي قائمة سياراتي</span></li>
+            </ul>
+          </ion-label>
+        </ion-item>
+
+        <ion-list lines="none">
+          <ion-item>
+            <ion-label>ماركة السيارة</ion-label>
+            <ion-select (ionChange)="changeBrand($event)" formControlName="brand">
+              <ion-select-option value="" disabled>اختر ماركة السيارة</ion-select-option>
+              <ion-select-option *ngFor="let brand of brands" value="{{brand.label}}">{{brand.label}}
+              </ion-select-option>
+            </ion-select>
+          </ion-item>
+          <ion-item *ngIf="modelArray">
+            <ion-label>نوع السيارة</ion-label>
+            <ion-select formControlName="model">
+              <ion-select-option value="" disabled>اختر نوع السيارة</ion-select-option>
+              <ion-select-option *ngFor="let m of modelArray" value="{{m}}">{{m}}</ion-select-option>
+            </ion-select>
+          </ion-item>
+          <ion-item>
+            <ion-label>موديل السيارة</ion-label>
+            <ion-select formControlName="state">
+              <ion-select-option value="" disabled>موديل السيارة</ion-select-option>
+              <ion-select-option *ngFor="let m of carReleaseYear" value="{{m}}">{{m}}</ion-select-option>
+
+            </ion-select>
+          </ion-item>
+          <ion-item>
+            <ion-label>رقم اللوحة</ion-label>
+            <ion-input formControlName="serialNumber"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label>عدد المقاعد</ion-label>
+            <ion-input formControlName="seatsNumber"></ion-input>
+          </ion-item>
+
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+
+    <!-- form for changing car -->
+    <ion-card mode="ios" class="ion-margin-top" id="card-transparent">
+      <ion-card-header>
+        <ion-card-subtitle>
+          إرفع الصور المطلوبة
+        </ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+
+        <div class="flex items-center ion-justify-content-around ion-margin-bottom">
+          <div class="fileUpload">
+            <input type="file" class="upload" />
+            <div>
+              <ion-icon name="car-sport" class="text-xl"></ion-icon>
+              <div>صور السيارة</div>
+            </div>
+          </div>
+          <div class="fileUpload">
+            <input type="file" class="upload" />
+            <div>
+              <ion-icon name="id-card" class="text-xl"></ion-icon>
+              <div>رخصة القيادة</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex items-center ion-justify-content-around ion-margin-bottom">
+          <div class="fileUpload">
+            <input type="file" class="upload" />
+            <div>
+              <ion-icon name="document-lock" class="text-xl"></ion-icon>
+              <div>تأمين السيارة</div>
+            </div>
+          </div>
+          <div class="fileUpload">
+            <input type="file" class="upload" />
+            <div>
+              <ion-icon name="document-attach" class="text-xl"></ion-icon>
+              <div>استمارة السيارة</div>
+            </div>
+          </div>
+        </div>
+
+        <ion-button class="ion-margin-top" type="submit" expand="block" size="large" color="light">
+          {{title}}
+        </ion-button>
+      </ion-card-content>
+    </ion-card>
+  </form>
+</ion-content>

@@ -1,0 +1,81 @@
+ion-header::after {
+    background-image: none;
+}
+#box{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#icon_2{
+  width: 50px;
+  height: 50px;
+  background: #7842a5;
+  border-radius: 100%;
+  box-shadow: 0px 0px 20px 10px #7e6592;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  ion-icon{
+    font-size: 20px;
+  }
+}
+#icon_1{
+  width: 50px;
+  height: 50px;
+  background: #ffffff;
+  /* border: 1px solid #c7c7c7; */
+  border-radius: 100%;
+  box-shadow: 0px 0px 20px 10px #efefef;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  ion-icon{
+    font-size: 20px;
+  }
+}
+#avatar{
+  border-radius: 10px;
+  img{
+    width: 100%;
+    border-radius: 100%;
+  }
+}
+hr{
+  background: #fff !important;
+}
+
+#active_icon{
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // box-shadow: 0px 4px 10px rgb(222, 222, 222);
+  background: #ffeec5;
+  border: 1px solid #fccf67;
+  border-radius: 20px;
+}
+#inactive_icon{
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // box-shadow: 0px 4px 10px rgb(222, 222, 222);
+  background: #ffffff;
+
+  border: 1px solid#d3d3d3;
+  border-radius: 20px;
+}
+.badge{
+  padding: 5px 20px;
+  background-color: #000;
+  color: #fff;
+  border-radius: 10px;
+  line-height: 100%;
+}
+#car_box{
+  img{
+    width: 150px;
+  }
+}

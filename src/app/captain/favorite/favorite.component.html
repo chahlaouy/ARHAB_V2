@@ -1,0 +1,160 @@
+<ion-content [fullscreen]="true" color="warning">
+    
+    <ion-card mode="ios" id="wrapper">
+        <ion-card-content>
+
+            <!-- header -->
+            <ion-header [translucent]="true">
+                <ion-toolbar>
+                  <ion-buttons slot="start">
+                    <ion-button>
+                      <ion-icon name="notifications-outline" color="primary" class="text-xl"></ion-icon>
+                    </ion-button>
+                  </ion-buttons>
+                  <ion-title>{{ title }}</ion-title>
+                  <ion-buttons slot="end">
+                    <ion-menu-button>
+                      <ion-icon name="apps" color="primary" class="text-xl"></ion-icon>
+                    </ion-menu-button>
+                  </ion-buttons>
+                </ion-toolbar>
+              </ion-header>
+
+              <ion-item class="ion-margin-bottom ion-margin-top" lines="none">
+                <ion-icon name="heart" slot="start" size="small" color="dark"></ion-icon>
+                <ion-label>
+                  <ul>
+                    <li>
+                      <div class="text-xl">تفضيلاتي</div>
+                    </li>
+                    <li><span class="text-note">يمكنك اختيار أي مما يلي تسمح به </span></li>
+                  </ul>
+                </ion-label>
+              </ion-item>
+
+              <!-- selected choices -->
+
+              <div class="flex items-center ion-justify-content-between ion-margin-top">
+                <div>
+                  <div id="active_icon">
+                    <ion-icon name="musical-note-outline" color="dark" class="text-lg"></ion-icon>
+                  </div>
+                  <div class="ion-text-center text-note ion-margin-top">
+                    موسيقى
+                  </div>
+                </div>
+        
+                <div>
+                  <div id="inactive_icon">
+                    <ion-icon name="logo-no-smoking" color="dark" class="text-lg"></ion-icon>
+                  </div>
+                  <div class="ion-text-center text-note ion-margin-top">
+                    التدخين
+                  </div>
+                </div>
+        
+                <div>
+                  <div id="active_icon">
+                    <ion-icon name="paw-outline" color="dark" class="text-lg"></ion-icon>
+                  </div>
+                  <div class="ion-text-center text-note ion-margin-top">
+                    الحيوانات
+                  </div>
+                </div>
+        
+                <div>
+                  <div id="inactive_icon">
+                    <ion-icon name="chatbubbles-outline" color="dark" class="text-lg"></ion-icon>
+                  </div>
+                  <div class="ion-text-center text-note ion-margin-top">
+                    دردشة
+                  </div>
+                </div>
+        
+              </div>
+        </ion-card-content>
+    </ion-card>
+
+
+    <!-- form for changing favorite -->
+    <ion-item class="ion-margin-top" lines="none">
+        <div class="text-lg"> يمكنك التغيير أدناه</div>
+      </ion-item>
+    <ion-card mode="ios" class="ion-margin-top" id="card-transparent">
+        <ion-card-content>
+            <form [formGroup]="userFavorite" (submit)="onFavoriteSubmit()">
+                <ion-list lines="none" class="ion-margin-top">
+                  <ion-item detail="false">
+                    <ion-label class="text-note">
+                      موسيقى
+                    </ion-label>
+                    <label class="radiobutton_container">
+                      <span class="ion-margin-start">نعم</span>
+                      <input value="1" formControlName="music" type="radio">
+                      <span class="radiobutton_mark"></span>
+                    </label>
+          
+                    <label class="radiobutton_container mr-3">
+                      <span class="ion-margin-start">لا</span>
+                      <input value="0" formControlName="music" type="radio">
+                      <span class="radiobutton_mark ion-margin-start"></span>
+                    </label>
+                  </ion-item>
+                  <ion-item detail="false">
+                    <ion-label>
+                      التدخين
+                    </ion-label>
+                    <label class="radiobutton_container">
+                      <span class="ion-margin-start">نعم</span>
+                      <input value="1" formControlName="smoking" type="radio">
+                      <span class="radiobutton_mark"></span>
+                    </label>
+          
+                    <label class="radiobutton_container mr-3">
+                      <span class="ion-margin-start">لا</span>
+                      <input value="0" formControlName="smoking" type="radio">
+                      <span class="radiobutton_mark ion-margin-start"></span>
+                    </label>
+                  </ion-item>
+                  <ion-item detail="false">
+                    <ion-label>
+                      دردشة
+                    </ion-label>
+                    <label class="radiobutton_container">
+                      <span class="ion-margin-start">نعم</span>
+                      <input value="1" formControlName="chat" type="radio">
+                      <span class="radiobutton_mark"></span>
+                    </label>
+          
+                    <label class="radiobutton_container mr-3">
+                      <span class="ion-margin-start">لا</span>
+                      <input value="0" formControlName="chat" type="radio">
+                      <span class="radiobutton_mark ion-margin-start"></span>
+                    </label>
+                  </ion-item>
+                  <ion-item detail="false">
+                    <ion-label>
+                      الحيوانات الأليفة
+                    </ion-label>
+                    <label class="radiobutton_container">
+                      <span class="ion-margin-start">نعم</span>
+                      <input value="1" formControlName="pets" type="radio">
+                      <span class="radiobutton_mark"></span>
+                    </label>
+          
+                    <label class="radiobutton_container mr-3">
+                      <span class="ion-margin-start">لا</span>
+                      <input value="0" formControlName="pets" type="radio">
+                      <span class="radiobutton_mark ion-margin-start"></span>
+                    </label>
+                  </ion-item>
+                  
+                </ion-list>
+                <ion-button class="ion-margin-top" type="submit" expand="block" size="large" color="light">
+                  موافق
+                </ion-button>
+            </form>
+        </ion-card-content>
+    </ion-card>
+
+</ion-content>

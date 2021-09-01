@@ -1,0 +1,80 @@
+
+<ion-content [fullscreen]="true" color="warning">
+    <ion-card mode="ios" id="wrapper">
+      <ion-card-content>
+
+        <!-- header -->
+        <ion-header [translucent]="true">
+          <ion-toolbar>
+            <ion-buttons slot="start">
+              <ion-button>
+                <ion-icon name="notifications-outline" color="primary" class="text-xl"></ion-icon>
+              </ion-button>
+            </ion-buttons>
+            <ion-title>{{ title }}</ion-title>
+            <ion-buttons slot="end">
+              <ion-menu-button>
+                <ion-icon name="apps" color="primary" class="text-xl"></ion-icon>
+              </ion-menu-button>
+            </ion-buttons>
+          </ion-toolbar>
+        </ion-header>
+
+        <ion-item class="ion-margin-bottom ion-margin-top" lines="none">
+          <ion-icon name="settings" slot="start" size="small" color="dark"></ion-icon>
+          <ion-label>
+            <ul>
+              <li>
+                <div class="text-xl">{{title}}</div>
+              </li>
+              <li><span class="text-note">قائمة الاعدادات</span></li>
+            </ul>
+          </ion-label>
+        </ion-item>
+
+        <ion-list lines="none">
+          
+          <ion-item color="primary" class="ion-margin-bottom">
+            <ion-label class="ion-padding-bottom ion-padding-top"> الملف الشخصي</ion-label>
+            <ion-icon name="person-outline" color="light" slot="end" class="ion-padding-bottom ion-padding-top"></ion-icon>
+          </ion-item>
+
+          <ion-item color="primary" class="ion-margin-bottom">
+            <ion-label class="ion-padding-bottom ion-padding-top">تغيير كلمة المرور</ion-label>
+            <ion-icon name="lock-open-outline" color="light" slot="end" class="ion-padding-bottom ion-padding-top"></ion-icon>
+          </ion-item>
+
+          <ion-item color="primary" class="ion-margin-bottom">
+            <ion-label class="ion-padding-bottom ion-padding-top">تغيير اللغة</ion-label>
+            <ion-icon name="earth-outline" color="light" slot="end" class="ion-padding-bottom ion-padding-top"></ion-icon>
+          </ion-item>
+
+          <ion-item color="primary" class="ion-margin-bottom">
+            <ion-label class="ion-padding-bottom ion-padding-top">الاسئلة الشائعة</ion-label>
+            <ion-icon name="chatbubble-ellipses-outline" color="light" slot="end" class="ion-padding-bottom ion-padding-top"></ion-icon>
+          </ion-item>
+
+          <ion-item color="primary" class="ion-margin-bottom">
+            <ion-label class="ion-padding-bottom ion-padding-top">الشكاوي و المقترحات</ion-label>
+            <ion-icon name="help-buoy-outline" color="light" slot="end" class="ion-padding-bottom ion-padding-top"></ion-icon>
+          </ion-item>
+
+          <ion-item color="primary">
+            <ion-label class="ion-padding-bottom ion-padding-top">الشروط والاحكام</ion-label>
+            <ion-icon name="information-circle-outline" color="light" slot="end" class="ion-padding-bottom ion-padding-top"></ion-icon>
+          </ion-item>
+          
+          
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+
+    
+    <ion-card mode="ios" class="ion-margin-top" id="card-transparent">
+
+      <ion-card-content>
+
+        
+      </ion-card-content>
+    </ion-card>
+</ion-content>

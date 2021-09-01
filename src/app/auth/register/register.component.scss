@@ -1,0 +1,24 @@
+#logo{
+    width: 100%;
+    height: 500px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img{
+        width: 200px;
+    }
+}
+ion-content{
+    --background: #967cc3 !important;
+}
+ion-item{
+    border-radius: 10px;
+}
+ion-button{
+    --box-shadow: none !important
+}
+ion-note{
+    font-size: 14px;
+    color: rgb(245, 60, 60);
+}

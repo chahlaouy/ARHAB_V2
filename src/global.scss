@@ -24,3 +24,67 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@500&display=swap');
+
+body{
+    direction: rtl;
+    font-family: 'Tajawal', sans-serif;
+}
+ion-content ion-toolbar{
+    --background: var(--ion-item-background, var(--ion-background-color, rgb(247, 247, 247)));
+}
+ion-card{
+    --background: #fbfbfb;
+}
+ion-toolbar{
+    --border-width: 0;
+    --border-style: none;
+    --border-color: transparent;
+    padding: 15px;
+    --padding-top: 15px !important;
+}
+ion-content{
+    --padding-top: 15px;
+    --padding-bottom: 15px;
+    --padding-start: 15px;
+    --padding-end: 15px;
+}
+ion-item{
+    --background: transparent !important
+}
+ion-list{
+    background: transparent !important
+}
+ul{
+    list-style: none;
+    padding: 0px;
+}
+.flex{
+    display: flex !important;
+}
+.items-center{
+    align-items: center;
+}
+.justify-center{
+    justify-content: center;
+}
+.text-note{
+    font-size: 13px;
+    color: #828282;
+}
+.text-note-white{
+    font-size: 13px;
+    color: #ffffff;
+}
+.text-lg{
+    font-size: 22px;
+}
+.justify-start{
+    justify-content: flex-start;
+}
+.items-start{
+    align-items: flex-start;
+}
+.text-xl{
+    font-size: 30px;
+}
