@@ -1,4 +1,3 @@
-
 <ion-content [fullscreen]="true" color="warning">
   <ion-card mode="ios" id="wrapper">
     <ion-card-content>
@@ -34,10 +33,12 @@
             <li>
               <div class="text-xl">{{title}}</div>
             </li>
-            <li><span class="text-note">قائمة الاعدادات</span></li>
+            <li><span class="text-note">انشاء رحلة جديدة</span></li>
           </ul>
         </ion-label>
       </ion-item>
+
+      <!-- Ride destination and surce -->
 
       <ion-item class="ion-margin-bottom ion-margin-top" lines="none">
         <ion-icon name="navigate" slot="start" size="small" color="dark"></ion-icon>
@@ -48,14 +49,15 @@
             </li>
             <li><span class="text-note">حدد نقطة الانطلاق</span></li>
             <li>
-              <input (keydown.enter)="$event.preventDefault()" placeholder="نقطة الانطلاق" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" #search class="search-map">
+              <input (keydown.enter)="$event.preventDefault()" placeholder="نقطة الانطلاق" autocorrect="off"
+                autocapitalize="off" spellcheck="off" type="text" #search class="search-map">
             </li>
           </ul>
         </ion-label>
       </ion-item>
 
-      <ion-item class="ion-margin-bottom ion-margin-top" lines="none">
-        <ion-icon name="pin" slot="start" size="small" color="dark"></ion-icon>
+      <ion-item class="ion-margin-bottom ion-margin-top" lines="none" color="primary">
+        <ion-icon name="pin" slot="start" size="small" color="light"></ion-icon>
         <ion-label>
           <ul>
             <li>
@@ -63,76 +65,103 @@
             </li>
             <li><span class="text-note">حدد نقطة الوصول</span></li>
             <li>
-              <input (keydown.enter)="$event.preventDefault()" placeholder="نقطة الوصول" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" #search class="search-map">
+              <input (keydown.enter)="$event.preventDefault()" placeholder="نقطة الوصول" autocorrect="off"
+                autocapitalize="off" spellcheck="off" type="text" #search class="search-map">
             </li>
           </ul>
         </ion-label>
       </ion-item>
 
-      <!-- Ride destination and surce -->
-
-      <ion-card mode="ios" color="primary">
-   
-        <ion-card-content>
-          
-    
-          <ion-card mode="ios">
-    
-            <ion-card-content>
-              <div id="box">
-                <div class="flex items-center">
-                  <ion-icon name="navigate-outline" class="ion-margin-end text-note text-lg"></ion-icon>
-                  <div>
-                    <!-- <input (keydown.enter)="$event.preventDefault()" placeholder="نقطة الانطلاق" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" #search> -->
-                    <div class="text-note">
-                      نقطة الانطلاق
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </ion-card-content>
-    
-          </ion-card>
-          <ion-card mode="ios" color="warning">
-    
-            <ion-card-content>
-              <div [routerLink]="['/']" id="box">
-                <div class="flex items-center">
-                  <ion-icon name="pin-outline" class="ion-margin-end text-note text-lg"></ion-icon>
-                  <div>
-                    <div class="text-lg">Riadh province</div>
-                    <div class="text-note">
-                       نقطة الوصول
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </ion-card-content>
-    
-          </ion-card>
-    
-          <div class="ion-text-center ion-padding">
-            <div class="text-note flex items-center ion-justify-content-between">
-              <ion-icon name="timer" color="light" class="text-lg"></ion-icon>
-              <span class="text-note-white">الوقت المتوقع للوصول</span>
-            </div>
-            <hr>
-            <div class="text-lg">
-              2 heures 5 min
-            </div>
-          </div>
-        </ion-card-content>
-      </ion-card>
+      <div class="ion-text-center ion-padding">
+        <div class="text-note flex items-center ion-justify-content-between">
+          <ion-icon name="timer" color="dark" class="text-lg"></ion-icon>
+          <span class="text-note">الوقت المتوقع للوصول</span>
+        </div>
+        <hr>
+        <div class="text-lg">
+          2 heures 5 min
+        </div>
+      </div>
 
     </ion-card-content>
   </ion-card>
 
-  
+
   <ion-card mode="ios" class="ion-margin-top" id="card-transparent">
 
+    <ion-card-header>
+      <ion-card-subtitle class="text-lg">
+        معلومات عن الرحلة
+      </ion-card-subtitle>
+    </ion-card-header>
     <ion-card-content>
 
-      
+
+      <ion-item class="ion-margin-bottom">
+        <ion-label class="ion-padding-bottom ion-padding-top">
+          تاريخ الانطلاق
+        </ion-label>
+        <ion-input type="date" class="ion-padding-bottom ion-padding-top"></ion-input>
+      </ion-item>
+
+      <div class="ion-margin-bottom">
+        <div class="text-note flex items-center ion-justify-content-between ion-padding-bottom ion-padding-top">
+          <span class="text-md">المسافة المحتملة</span>
+          <div class="text-md">
+            0.0 كلم
+          </div>
+        </div>
+      </div>
+
+      <div class="ion-margin-bottom">
+        <div class="text-note flex items-center ion-justify-content-between ion-padding-bottom ion-padding-top">
+          <span class="text-md">السعر المتوقع</span>
+          <div class="text-md">
+            0.0 ريال
+          </div>
+        </div>
+      </div>
+
+      <div class="ion-margin-bottom">
+        <div class="text-note flex items-center ion-justify-content-between ion-padding-bottom ion-padding-top">
+          <span class="text-md">حدد سعر المقعد</span>
+          <div class="text-md">
+            <div class="flex items-center">
+              <span class="in-dec-button ion-margin-end">+</span>
+              <span class="price">124</span>
+              <span class="in-dec-button ion-margin-start">-</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ion-margin-bottom">
+        <div class="text-note flex items-center ion-justify-content-between ion-padding-bottom ion-padding-top">
+          <span class="text-md">عدد المقاعد المتاحة</span>
+          <div class="text-md">
+            <div class="flex items-center">
+              <span class="in-dec-button ion-margin-end">+</span>
+              <span class="price">3</span>
+              <span class="in-dec-button ion-margin-start">-</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <ion-item class="ion-margin-bottom" lines="none">
+        <ion-label class="ion-padding-bottom ion-padding-top">اختر السيارة</ion-label>
+        <ion-select class="ion-padding-bottom ion-padding-top">
+          <ion-select-option value="" disabled selected>اختر السيارة</ion-select-option>
+          <ion-select-option value="">اختر السيارة</ion-select-option>
+          <ion-select-option value="" >اختر السيارة</ion-select-option>
+          
+
+        </ion-select>
+      </ion-item>
+
+      <ion-button class="ion-margin-top" type="submit" expand="block" size="large" color="light">
+        تأكيد
+      </ion-button>
     </ion-card-content>
   </ion-card>
 </ion-content>

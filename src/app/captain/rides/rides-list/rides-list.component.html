@@ -1,3 +1,269 @@
-<p>
-  rides-list works!
-</p>
+<ion-content [fullscreen]="true" color="warning">
+  <ion-card mode="ios" id="wrapper">
+    <ion-card-content>
+
+      <ion-header [translucent]="true">
+        <ion-toolbar>
+          <ion-buttons slot="start">
+            <ion-button>
+              <ion-icon name="notifications-outline" color="primary" class="text-xl"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+          <ion-title>{{ title }}</ion-title>
+          <ion-buttons slot="end">
+            <ion-menu-button>
+              <ion-icon name="apps" color="primary" class="text-xl"></ion-icon>
+            </ion-menu-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+
+      <ion-item class="ion-margin-bottom ion-margin-top" lines="none">
+        <ion-icon name="car" slot="start" size="small" color="dark"></ion-icon>
+        <ion-label>
+          <ul>
+            <li>
+              <div class="text-xl">{{title}}</div>
+            </li>
+
+          </ul>
+        </ion-label>
+      </ion-item>
+
+      <!-- Rides list -->
+
+      <ion-card mode="ios" class="ion-margin-bottom" id="card-transparent">
+        <ion-card-header>
+          <ion-card-subtitle>
+            <ion-item>
+              <ion-icon name="timer" color="warning" slot="end"></ion-icon>
+              <ion-label class="text-md"> موعد الانطلاق</ion-label>
+              <ion-label class="text-md"> 14:00</ion-label>
+            </ion-item>
+          </ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>
+
+          <ion-item class="ion-margin-bottom" lines="none">
+            <ion-icon name="navigate" slot="start" size="small" color="warning"></ion-icon>
+            <ion-label>
+              <ul>
+                <li>
+                  <div class="text-lg">نقطة الانطلاق</div>
+                </li>
+                <li><span class="text-md">saudi arabia mekkah</span></li>
+              </ul>
+            </ion-label>
+          </ion-item>
+
+          <ion-item class="ion-margin-bottom ion-margin-top" lines="none" color="light">
+            <ion-icon name="pin" slot="start" size="small" color="warning"></ion-icon>
+            <ion-label>
+              <ul>
+                <li>
+                  <div class="text-lg">نقطة الوصول</div>
+                </li>
+                <li><span class="text-md">Erriadh saudia arabia</span></li>
+              </ul>
+            </ion-label>
+          </ion-item>
+
+          <div class="flex items-center ion-justify-content-between ion-margin-bottom ion-margin-top">
+            <span class="text-note">عدد المقاعد المتاحة</span>
+            <div class="badge"> 5 مقاعد</div>
+          </div>
+
+          <div class="flex items-center ion-justify-content-between ion-margin-bottom ion-margin-top">
+            <span class="text-note">عدد المقاعد المحجوزة</span>
+            <div class="badge-available"> 5 مقاعد</div>
+          </div>
+
+          <ion-button class="ion-margin-top ion-margin-bottom" expand="block" size="large" color="primary">
+            المزيد من التفاصيل
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card mode="ios" class="ion-margin-bottom" id="card-transparent">
+        <ion-card-header>
+          <ion-card-subtitle>
+            <ion-item>
+              <ion-icon name="timer" color="warning" slot="end"></ion-icon>
+              <ion-label class="text-md"> موعد الانطلاق</ion-label>
+              <ion-label class="text-md"> 14:00</ion-label>
+            </ion-item>
+          </ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>
+
+          <ion-item class="ion-margin-bottom" lines="none">
+            <ion-icon name="navigate" slot="start" size="small" color="warning"></ion-icon>
+            <ion-label>
+              <ul>
+                <li>
+                  <div class="text-lg">نقطة الانطلاق</div>
+                </li>
+                <li><span class="text-md">saudi arabia mekkah</span></li>
+              </ul>
+            </ion-label>
+          </ion-item>
+
+          <ion-item class="ion-margin-bottom ion-margin-top" lines="none" color="light">
+            <ion-icon name="pin" slot="start" size="small" color="warning"></ion-icon>
+            <ion-label>
+              <ul>
+                <li>
+                  <div class="text-lg">نقطة الوصول</div>
+                </li>
+                <li><span class="text-md">Erriadh saudia arabia</span></li>
+              </ul>
+            </ion-label>
+          </ion-item>
+
+          <div class="flex items-center ion-justify-content-between ion-margin-bottom ion-margin-top">
+            <span class="text-note">عدد المقاعد المتاحة</span>
+            <div class="badge"> 5 مقاعد</div>
+          </div>
+
+          <div class="flex items-center ion-justify-content-between ion-margin-bottom ion-margin-top">
+            <span class="text-note">عدد المقاعد المحجوزة</span>
+            <div class="badge-available"> 5 مقاعد</div>
+          </div>
+
+          <ion-button class="ion-margin-top ion-margin-bottom" expand="block" size="large" color="primary">
+            المزيد من التفاصيل
+          </ion-button>
+
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card mode="ios" class="ion-margin-bottom" id="card-transparent">
+        <ion-card-header>
+          <ion-card-subtitle>
+            <ion-item>
+              <ion-icon name="timer" color="warning" slot="end"></ion-icon>
+              <ion-label class="text-md"> موعد الانطلاق</ion-label>
+              <ion-label class="text-md"> 14:00</ion-label>
+            </ion-item>
+          </ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>
+
+          <ion-item class="ion-margin-bottom" lines="none">
+            <ion-icon name="navigate" slot="start" size="small" color="warning"></ion-icon>
+            <ion-label>
+              <ul>
+                <li>
+                  <div class="text-lg">نقطة الانطلاق</div>
+                </li>
+                <li><span class="text-md">saudi arabia mekkah</span></li>
+              </ul>
+            </ion-label>
+          </ion-item>
+
+          <ion-item class="ion-margin-bottom ion-margin-top" lines="none" color="light">
+            <ion-icon name="pin" slot="start" size="small" color="warning"></ion-icon>
+            <ion-label>
+              <ul>
+                <li>
+                  <div class="text-lg">نقطة الوصول</div>
+                </li>
+                <li><span class="text-md">Erriadh saudia arabia</span></li>
+              </ul>
+            </ion-label>
+          </ion-item>
+
+          <div class="flex items-center ion-justify-content-between ion-margin-bottom ion-margin-top">
+            <span class="text-note">عدد المقاعد المتاحة</span>
+            <div class="badge"> 5 مقاعد</div>
+          </div>
+
+          <div class="flex items-center ion-justify-content-between ion-margin-bottom ion-margin-top">
+            <span class="text-note">عدد المقاعد المحجوزة</span>
+            <div class="badge-available"> 5 مقاعد</div>
+          </div>
+
+          <ion-button class="ion-margin-top ion-margin-bottom" expand="block" size="large" color="primary" routerLink="[123]">
+            المزيد من التفاصيل
+          </ion-button>
+
+          <!-- <ion-button class="ion-margin-bottom" expand="block" size="large" color="warning">
+            تأجيل
+          </ion-button>
+
+          <ion-button expand="block" size="large" color="danger">
+            إلغاء
+          </ion-button> -->
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card mode="ios" class="ion-margin-bottom" id="card-transparent">
+        <ion-card-header>
+          <ion-card-subtitle>
+            <ion-item>
+              <ion-icon name="timer" color="warning" slot="end"></ion-icon>
+              <ion-label class="text-md"> موعد الانطلاق</ion-label>
+              <ion-label class="text-md"> 14:00</ion-label>
+            </ion-item>
+          </ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>
+
+          <ion-item class="ion-margin-bottom" lines="none">
+            <ion-icon name="navigate" slot="start" size="small" color="warning"></ion-icon>
+            <ion-label>
+              <ul>
+                <li>
+                  <div class="text-lg">نقطة الانطلاق</div>
+                </li>
+                <li><span class="text-md">saudi arabia mekkah</span></li>
+              </ul>
+            </ion-label>
+          </ion-item>
+
+          <ion-item class="ion-margin-bottom ion-margin-top" lines="none" color="light">
+            <ion-icon name="pin" slot="start" size="small" color="warning"></ion-icon>
+            <ion-label>
+              <ul>
+                <li>
+                  <div class="text-lg">نقطة الوصول</div>
+                </li>
+                <li><span class="text-md">Erriadh saudia arabia</span></li>
+              </ul>
+            </ion-label>
+          </ion-item>
+
+          <ion-button class="ion-margin-top ion-margin-bottom" expand="block" size="large" color="primary">
+            المزيد من التفاصيل
+          </ion-button>
+
+          <!-- <ion-button class="ion-margin-bottom" expand="block" size="large" color="warning">
+            تأجيل
+          </ion-button>
+
+          <ion-button expand="block" size="large" color="danger">
+            إلغاء
+          </ion-button> -->
+        </ion-card-content>
+      </ion-card>
+
+
+
+    </ion-card-content>
+  </ion-card>
+
+
+  <!-- <ion-card mode="ios" class="ion-margin-top" id="card-transparent">
+
+    <ion-card-header>
+      <ion-card-subtitle class="text-lg">
+        معلومات عن الرحلة
+      </ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+
+
+     
+    </ion-card-content>
+  </ion-card> -->
+</ion-content>

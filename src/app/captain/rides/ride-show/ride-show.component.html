@@ -1,0 +1,189 @@
+<ion-content [fullscreen]="true" color="warning">
+  <ion-card mode="ios" id="wrapper">
+    <ion-card-content>
+
+      <ion-header [translucent]="true">
+        <ion-toolbar>
+          <ion-buttons slot="start">
+            <ion-button>
+              <ion-icon name="notifications-outline" color="primary" class="text-xl"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+          <ion-title>{{ title }}</ion-title>
+          <ion-buttons slot="end">
+            <ion-button>
+              <ion-icon name="chevron-back" color="primary" class="text-xl"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+
+      <ion-item class="ion-margin-bottom ion-margin-top" lines="none">
+        <ion-icon name="car" slot="start" size="small" color="dark"></ion-icon>
+        <ion-label>
+          <ul>
+            <li>
+              <div class="text-md">{{title}}</div>
+            </li>
+
+          </ul>
+        </ion-label>
+      </ion-item>
+
+      <!-- Ride inFormation -->
+
+      <ion-card mode="ios">
+
+        <ion-card-content>
+          <div id="box" class="ion-padding">
+            <div class="flex items-center">
+              <ion-icon name="navigate-outline" class="ion-margin-end text-md"></ion-icon>
+              <div>
+                <div class="text-md">Mekkah, jeddah privince</div>
+                <div class="text-note">
+                  نقطة الانطلاق
+                </div>
+              </div>
+            </div>
+          </div>
+        </ion-card-content>
+
+      </ion-card>
+
+      <ion-card mode="ios">
+
+        <ion-card-content>
+          <div id="box" class="ion-padding">
+            <div class="flex items-center">
+              <ion-icon name="pin-outline" class="ion-margin-end text-note text-md"></ion-icon>
+              <div>
+                <div class="text-md">Riadh province</div>
+                <div class="text-note">
+                  نقطة الوصول
+                </div>
+              </div>
+            </div>
+          </div>
+        </ion-card-content>
+
+      </ion-card>
+
+      <ion-card mode="ios">
+
+        <ion-card-content>
+
+          <div class="ion-text-center ion-padding">
+            <div class="text-note flex items-center ion-justify-content-between">
+              <ion-icon name="timer" color="dark" class="text-md"></ion-icon>
+              <span class="text-note">الوقت المتوقع للوصول</span>
+            </div>
+            <hr>
+            <div class="text-lg">
+              2 heures 5 min
+            </div>
+          </div>
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card mode="ios">
+        <ion-card-content>
+          <div>
+            <div class="text-md">اليوم</div>
+            <hr>
+            <div class="text-md ion-margin-top">
+              <span>ساعة الانطلاق</span>
+              <span> 14:00</span>
+            </div>
+
+          </div>
+        </ion-card-content>
+      </ion-card>
+      <ion-card color="warning" mode="ios">
+        <ion-card-content>
+          <div>
+            <div class="text-md">السعر</div>
+            <hr>
+            <div class="text-md ion-margin-top">124 ريال</div>
+
+          </div>
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card mode="ios">
+
+        <ion-card-content>
+
+          <div class="ion-text-center ion-padding">
+            <div class="text-note flex items-center ion-justify-content-between">
+              <ion-icon name="timer" color="dark" class="text-md"></ion-icon>
+              <span class="text-note">عدد المقاعد المتاحة</span>
+            </div>
+            <hr>
+            <div class="text-xl">
+              3 مقاعد
+            </div>
+          </div>
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card mode="ios" color="primary">
+
+        <ion-card-content>
+
+          <div class="ion-text-center ion-padding">
+            <div class="text-note flex items-center ion-justify-content-between">
+              <ion-icon name="timer" color="light" class="text-md"></ion-icon>
+              <span class="text-note-white">عدد المقاعد المحجوزة</span>
+            </div>
+            <hr>
+            <div class="text-xl-white">
+              3 مقاعد
+            </div>
+          </div>
+        </ion-card-content>
+      </ion-card>
+
+
+      <div id="car_box" class="ion-text-center">
+        <div class="ion-padding flex items-center ion-justify-content-center">
+          <img src="../../../assets/default-car.png" alt="">
+        </div>
+        <div class="ion-margin-top">
+          <div class="text-xl">Mecedes amg 2021</div>
+          <div class="text-note">
+            12 TY 56
+          </div>
+        </div>
+      </div>
+
+
+
+      <!-- End Ride Information -->
+    </ion-card-content>
+  </ion-card>
+
+
+  <ion-card mode="ios" class="ion-margin-top" id="card-transparent">
+
+    <ion-card-header>
+      <ion-card-subtitle class="text-md">
+        الخيارات
+      </ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+
+      <ion-button class="ion-margin-bottom" expand="block" size="large" color="primary">
+        بدأ الرحلة
+      </ion-button>
+
+      <ion-button class="ion-margin-bottom" expand="block" size="large" color="light">
+        تأجيل
+      </ion-button>
+
+      <ion-button expand="block" size="large" color="danger">
+        إلغاء
+      </ion-button>
+
+    </ion-card-content>
+  </ion-card>
+</ion-content>

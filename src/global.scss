@@ -77,7 +77,11 @@ ul{
     color: #ffffff;
 }
 .text-lg{
-    font-size: 22px;
+    font-size: 25px;
+}
+.text-lg-white{
+    font-size: 25px;
+    color: #fff;
 }
 .justify-start{
     justify-content: flex-start;
@@ -87,4 +91,16 @@ ul{
 }
 .text-xl{
     font-size: 30px;
+}
+.text-xl-white{
+    font-size: 30px;
+    color: #fff;
+}
+.text-md{
+    font-size: 18px;
+    color: #1c1c1c;
+}
+.text-md-white{
+    font-size: 18px;
+    color: #ffffff;
 }

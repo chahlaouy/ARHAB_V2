@@ -1,0 +1,79 @@
+<ion-content [fullscreen]="true" color="warning">
+  <ion-card mode="ios" id="wrapper">
+    <ion-card-content>
+
+      <ion-header [translucent]="true">
+        <ion-toolbar>
+          <ion-buttons slot="start">
+            <ion-button>
+              <ion-icon name="notifications-outline" color="primary" class="text-xl"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+          <ion-title>{{ title }}</ion-title>
+          <ion-buttons slot="end">
+            <ion-menu-button>
+              <ion-icon name="apps" color="primary" class="text-xl"></ion-icon>
+            </ion-menu-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+
+      <ion-item class="ion-margin-bottom ion-margin-top" lines="none">
+        <ion-icon name="car" slot="start" size="small" color="dark"></ion-icon>
+        <ion-label>
+          <ul>
+            <li>
+              <div class="text-xl">{{title}}</div>
+            </li>
+            <li>
+              <div class="text-note">{{subTitle}}</div>
+            </li>
+
+          </ul>
+        </ion-label>
+      </ion-item>
+
+      <ion-card mode="ios">
+        <ion-card-content>
+
+          <ion-item>
+            <ion-thumbnail slot="start">
+              <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+            </ion-thumbnail>
+            <ion-label>
+              <ul>
+                <li>
+                  <div class="text-lg">mohamed ibn</div>
+                </li>
+                <li>
+                  <div class="text-md"> 35 years old</div>
+                </li>
+    
+              </ul>
+            </ion-label>
+          </ion-item>
+
+          <div class="flex items-center ion-justify-content-between ion-margin-bottom ion-margin-top">
+            <span class="text-note">عدد المقاعد المطلوبة</span>
+            <div class="badge-available"> 1 مقاعد</div>
+          </div>
+
+          <ion-button class="ion-margin-top ion-margin-bottom" expand="block" size="large" color="light">
+            دردشة
+          </ion-button>
+
+          <ion-button class="ion-margin-top ion-margin-bottom" expand="block" size="large" color="primary">
+            تأكيد الطلب
+          </ion-button>
+
+          <ion-button class="ion-margin-top ion-margin-bottom" expand="block" size="large" color="warning">
+            رفض الطلب
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+
+
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

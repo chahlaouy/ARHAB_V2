@@ -21,20 +21,24 @@ ion-toolbar{
 ion-item{
     border-radius: 10px !important;
 }
+// ion-card{
+//     box-shadow: none !important;
+// }
 #card-transparent{
-    --background: #fff !important;
-    box-shadow: 0px 0px 10px rgb(227, 227, 227);
+    --background: transparent !important;
+    box-shadow: none !important;
 }
-.badge, .badge-available{
-    padding: 5px 20px;
-    border-radius: 10px;
-    line-height: 100%;
+#box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+hr{
+    background: #d0d0d0 !important;
 }
-.badge{
-    background-color: #000;
-    color: #fff;
+#car_box{
+    img{
+        width: 150px;
 }
-.badge-available{
-    background-color: rgb(114, 233, 29);
-    color: rgb(28, 28, 28);
 }

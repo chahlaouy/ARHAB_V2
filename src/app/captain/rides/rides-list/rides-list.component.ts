@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RidesListComponent implements OnInit {
 
+  title: string = "قائمة رحلاتى";
   constructor() { }
 
   ngOnInit() {}

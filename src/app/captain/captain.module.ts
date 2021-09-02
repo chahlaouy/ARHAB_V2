@@ -9,6 +9,8 @@ import { IonicModule } from '@ionic/angular';
 import { AddCarComponent } from './cars/add-car/add-car.component';
 import { NewRideComponent } from './rides/new-ride/new-ride.component';
 import { RidesListComponent } from './rides/rides-list/rides-list.component';
+import { RideShowComponent } from './rides/ride-show/ride-show.component';
+import { SingleChatComponent } from './requests/chat/single-chat/single-chat.component';
 
 
 
@@ -19,7 +21,9 @@ import { RidesListComponent } from './rides/rides-list/rides-list.component';
     CarComponent,
     AddCarComponent,
     NewRideComponent,
-    RidesListComponent
+    RidesListComponent,
+    RideShowComponent,
+    SingleChatComponent
   ],
   imports: [
     CommonModule,
