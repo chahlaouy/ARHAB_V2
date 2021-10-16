@@ -13,7 +13,8 @@ export interface ResponseJwt{
         email_verified_at: string,
         created_at: string,
         updated_at: string,
-        user_role: string
+        user_role: string,
+        is_activated: boolean
 
     }
 }

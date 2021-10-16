@@ -1,0 +1,95 @@
+<ion-content [fullscreen]="true" color="warning">
+  <ion-card mode="ios" id="wrapper">
+    <ion-card-content>
+
+      <ion-header [translucent]="true">
+        <ion-toolbar>
+          <ion-buttons slot="start">
+            <ion-button>
+              <ion-icon name="notifications-outline" color="primary" class="text-xl"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+          <ion-title>{{ title }}</ion-title>
+          <ion-buttons slot="end">
+            <ion-menu-button>
+              <ion-icon name="apps" color="primary" class="text-xl"></ion-icon>
+            </ion-menu-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+
+      <ion-item class="ion-margin-bottom ion-margin-top" lines="none">
+        <ion-icon name="wallet" slot="start" size="small" color="dark"></ion-icon>
+        <ion-label>
+          <ul>
+            <li>
+              <div class="text-xl">{{title}}</div>
+            </li>
+            <li>
+              <div class="text-note">{{subTitle}}</div>
+            </li>
+
+          </ul>
+        </ion-label>
+      </ion-item>
+
+
+      <ion-card >
+        <ion-card-header>
+          <ion-card-subtitle>
+           <ion-item>
+             <ion-label>رصيدك</ion-label>
+             <ion-icon name="layers-outline" slot="end" color="primary"></ion-icon>
+           </ion-item>
+          </ion-card-subtitle>
+          <ion-card-title>
+            
+          </ion-card-title>
+        </ion-card-header>
+        <ion-card-content> 
+          <div class="ion-text-center text-xl">
+            <span>304.00 </span>
+            <span>ريال</span>  
+          </div>
+          <div class="ion-margin-top text-note ion-text-center">
+            <!-- soft limit -->
+            <div class="ion-margin-top flex items-center ion-justify-content-between">
+              <span>الحد المتوسط </span>
+              <div class="yellow">
+
+                <span> 105.00 </span>
+                <span>ريال</span> 
+              </div>
+            </div>
+            <!-- Hard limit -->
+            <div class="ion-margin-top flex items-center ion-justify-content-between">
+              <span>الحد الاقصى </span>
+              <div class="red">
+                <span> 304.00 </span>
+                <span>ريال</span> 
+              </div>
+            </div>
+          </div>
+          <ion-button class="ion-margin-top" type="submit" expand="block" size="large" color="primary" routerLink="add-car">
+            سجلي
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card mode="ios" class="ion-margin-top" id="card-transparent">
+    <ion-card-content>
+      <div class="text-md ion-margin-bottom">
+        حدد مقدار المبلغ للدفع
+      </div>
+      <ion-item class="ion-margin-top ion-margin-bottom">
+        <ion-label>المبلغ</ion-label>
+        <ion-input type="number"></ion-input>
+      </ion-item>
+      <ion-button class="ion-margin-top" type="submit" expand="block" size="large" color="light" routerLink="add-car">
+        اكد و ادفع
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

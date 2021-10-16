@@ -1,0 +1,80 @@
+<ion-content [fullscreen]="true" color="warning">
+  <ion-card mode="ios" id="wrapper">
+    <ion-card-content>
+
+      <ion-header [translucent]="true">
+        <ion-toolbar>
+          <ion-buttons slot="start">
+            <ion-button>
+              <ion-icon name="notifications-outline" color="primary" class="text-xl"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+          <ion-title>{{ title }}</ion-title>
+          <ion-buttons slot="end">
+            <ion-menu-button>
+              <ion-icon name="apps" color="primary" class="text-xl"></ion-icon>
+            </ion-menu-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+
+      <ion-item class="ion-margin-bottom ion-margin-top" lines="none">
+        <ion-icon name="star" slot="start" size="small" color="dark"></ion-icon>
+        <ion-label>
+          <ul>
+            <li>
+              <div class="text-xl">{{title}}</div>
+            </li>
+            <li>
+              <div class="text-note">{{subTitle}}</div>
+            </li>
+
+          </ul>
+        </ion-label>
+      </ion-item>
+
+      <!-- Ride Reviews list  -->
+      
+      <ion-card mode="ios">
+        <ion-card-header>
+          <ion-card-subtitle>
+           <ion-item>
+             <ion-avatar slot="start">
+               <img src="../../../../assets/avatar.png" alt="">
+             </ion-avatar>
+             <ion-label>محمد محمود</ion-label>
+           </ion-item>
+          </ion-card-subtitle>
+          <ion-card-title>
+            
+          </ion-card-title>
+        </ion-card-header>
+        <ion-card-content> 
+          <ul class="ion-padding-start">
+            <li class="text-md ion-margin-bottom">
+              التعليق
+            </li>
+            <li class="text-note">
+              صفحة  الدفع ادخل بيانات الاعتماد الخاصة بك تقيماتي حسب الرحلة عد
+            </li>
+          </ul>
+
+          <ion-item class="ion-margin-bottom">
+            <ion-label slot="start">
+              التقييم
+            </ion-label>
+            <ion-label slot="end">
+              <ion-icon name="star" color="warning"></ion-icon>
+              <ion-icon name="star" color="warning"></ion-icon>
+              <ion-icon name="star" color="warning"></ion-icon>
+            </ion-label>
+          </ion-item>
+        </ion-card-content>
+      </ion-card>
+    
+
+    </ion-card-content>
+  </ion-card>
+
+  
+</ion-content>

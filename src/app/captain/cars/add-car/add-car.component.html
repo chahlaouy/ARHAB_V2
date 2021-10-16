@@ -80,31 +80,36 @@
 
         <div class="flex items-center ion-justify-content-around ion-margin-bottom">
           <div class="fileUpload">
-            <input type="file" class="upload" />
+            <input 
+              type="file" 
+              class="upload" 
+              
+              (change)="onCarImgChange($event)"
+              />
             <div>
               <ion-icon name="car-sport" class="text-xl"></ion-icon>
               <div>صور السيارة</div>
             </div>
           </div>
           <div class="fileUpload">
-            <input type="file" class="upload" />
+            <input type="file" class="upload" (change)="onLisenceImgChange($event)"/>
             <div>
               <ion-icon name="id-card" class="text-xl"></ion-icon>
               <div>رخصة القيادة</div>
             </div>
-          </div>
+          </div >
         </div>
 
         <div class="flex items-center ion-justify-content-around ion-margin-bottom">
           <div class="fileUpload">
-            <input type="file" class="upload" />
+            <input type="file" class="upload" (change)="onAssuranceImgChange($event)"/>
             <div>
               <ion-icon name="document-lock" class="text-xl"></ion-icon>
               <div>تأمين السيارة</div>
             </div>
           </div>
           <div class="fileUpload">
-            <input type="file" class="upload" />
+            <input type="file" class="upload" (change)="onPaperImgChange($event)"/>
             <div>
               <ion-icon name="document-attach" class="text-xl"></ion-icon>
               <div>استمارة السيارة</div>

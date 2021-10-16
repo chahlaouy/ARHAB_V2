@@ -12,11 +12,23 @@
           <div id="header-content">
             <img src="../assets/avatar.png" alt="user-avatar">
             <ion-label class="text-left">
+              
               <h2>{{ authUser.user.username }}</h2>
               <p> {{ authUser.user.email }}</p>
+              
             </ion-label>
           </div>
-          <ion-list id="inbox-list" lines="none">
+          <ion-list id="inbox-list" lines="none" *ngIf="authUser.user.userRole === 'passenger'">
+            <ion-menu-toggle auto-hide="false" *ngFor="let p of passengerPages; let i = index">
+              <ion-item routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false"
+                routerLinkActive="selected">
+                <ion-icon slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon>
+                <ion-label>{{ p.title }}</ion-label>
+              </ion-item>
+            </ion-menu-toggle>
+          </ion-list>
+
+          <ion-list id="inbox-list" lines="none" *ngIf="authUser.user.userRole === 'driver'">
             <ion-menu-toggle auto-hide="false" *ngFor="let p of driverPages; let i = index">
               <ion-item routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false"
                 routerLinkActive="selected">

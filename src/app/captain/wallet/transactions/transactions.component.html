@@ -1,0 +1,159 @@
+<ion-content [fullscreen]="true" color="warning">
+  <ion-card mode="ios" id="wrapper">
+    <ion-card-content>
+
+      <ion-header [translucent]="true">
+        <ion-toolbar>
+          <ion-buttons slot="start">
+            <ion-button>
+              <ion-icon name="notifications-outline" color="primary" class="text-xl"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+          <ion-title>{{ title }}</ion-title>
+          <ion-buttons slot="end">
+            <ion-menu-button>
+              <ion-icon name="apps" color="primary" class="text-xl"></ion-icon>
+            </ion-menu-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+
+      <ion-item class="ion-margin-bottom ion-margin-top" lines="none">
+        <ion-icon name="wallet" slot="start" size="small" color="dark"></ion-icon>
+        <ion-label>
+          <ul>
+            <li>
+              <div class="text-xl">{{title}}</div>
+            </li>
+            <li>
+              <div class="text-note">{{subTitle}}</div>
+            </li>
+
+          </ul>
+        </ion-label>
+      </ion-item>
+
+      <!-- transaction list -->
+      <ion-card mode="ios">
+        <ion-card-header>
+          <ion-card-subtitle>
+           <ion-item>
+             <ion-label>الرحلة عدد 47</ion-label>
+             <ion-icon name="car-sport-outline" slot="end" color="primary"></ion-icon>
+           </ion-item>
+          </ion-card-subtitle>
+          <ion-card-title>
+            
+          </ion-card-title>
+        </ion-card-header>
+        <ion-card-content> 
+          <ion-list>
+            <ion-item class="ion-margin-bottom">
+              <ion-label slot="start">المبلغ</ion-label>
+              <ion-label>
+                <span>149.00</span>
+                <span>ريال</span>
+              </ion-label>
+            </ion-item>
+            
+            <ion-item>
+              <ion-label slot="start">التاريخ</ion-label>
+              <ion-label>
+                01/01/2021
+              </ion-label>
+            </ion-item>
+
+            <ion-item>
+              <ion-label slot="start">الحالة</ion-label>
+              <ion-label>
+                <div class="badge-available">تم الدفع</div>
+              </ion-label>
+            </ion-item>
+          </ion-list>
+          
+        </ion-card-content>
+      </ion-card>
+      <ion-card mode="ios">
+        <ion-card-header>
+          <ion-card-subtitle>
+           <ion-item>
+             <ion-label>الرحلة عدد 500</ion-label>
+             <ion-icon name="car-sport-outline" slot="end" color="primary"></ion-icon>
+           </ion-item>
+          </ion-card-subtitle>
+          <ion-card-title>
+            
+          </ion-card-title>
+        </ion-card-header>
+        <ion-card-content> 
+          <ion-list>
+            <ion-item class="ion-margin-bottom">
+              <ion-label slot="start">المبلغ</ion-label>
+              <ion-label>
+                <span>149.00</span>
+                <span>ريال</span>
+              </ion-label>
+            </ion-item>
+            
+            <ion-item>
+              <ion-label slot="start">التاريخ</ion-label>
+              <ion-label>
+                01/01/2021
+              </ion-label>
+            </ion-item>
+
+            <ion-item>
+              <ion-label slot="start">الحالة</ion-label>
+              <ion-label>
+                <div class="badge">في الانتظار</div>
+              </ion-label>
+            </ion-item>
+          </ion-list>
+          
+        </ion-card-content>
+      </ion-card>
+      <ion-card mode="ios">
+        <ion-card-header>
+          <ion-card-subtitle>
+           <ion-item>
+             <ion-label>الرحلة عدد 546</ion-label>
+             <ion-icon name="car-sport-outline" slot="end" color="primary"></ion-icon>
+           </ion-item>
+          </ion-card-subtitle>
+          <ion-card-title>
+            
+          </ion-card-title>
+        </ion-card-header>
+        <ion-card-content> 
+          <ion-list>
+            <ion-item class="ion-margin-bottom">
+              <ion-label slot="start">المبلغ</ion-label>
+              <ion-label>
+                <span>149.00</span>
+                <span>ريال</span>
+              </ion-label>
+            </ion-item>
+            
+            <ion-item>
+              <ion-label slot="start">التاريخ</ion-label>
+              <ion-label>
+                01/01/2021
+              </ion-label>
+            </ion-item>
+
+            <ion-item>
+              <ion-label slot="start">الحالة</ion-label>
+              <ion-label>
+                <div class="badge-available">تم الدفع</div>
+              </ion-label>
+            </ion-item>
+          </ion-list>
+          
+        </ion-card-content>
+      </ion-card>
+
+    </ion-card-content>
+  </ion-card>
+
+  
+</ion-content>

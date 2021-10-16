@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
+import { autoLogin } from './auth/state/auth.actions';
 import { getAuthenticatedUser } from './auth/state/auth.selectors';
 import { AuthenticatedUser } from './models/authenticated-user.model';
 import { getErrorMessages, getLoadingSpinnerState } from './shared/store/shared.selectors';
@@ -17,14 +18,14 @@ export class AppComponent implements OnInit{
   authenticatedUser$: Observable<AuthenticatedUser>;
 
   public driverPages = [
-    { title: 'الصفحة الرئيسية', url: '/folder/Spam', icon: 'home' },
-    { title: 'الحجوزات', url: '/folder/Outbox', icon: 'bookmarks' },
+    { title: 'الصفحة الرئيسية', url: '/', icon: 'home' },
+    { title: 'الحجوزات', url: '/', icon: 'bookmarks' },
     { title: 'الرحلات', url: '/folder/Outbox', icon: 'bookmarks' },
     { title: 'الرسائل', url: '/folder/Outbox', icon: 'chatbubbles' },
-    { title: 'اضف رحلة', url: '/folder/Favorites', icon: 'add-circle' },
+    { title: 'اضف رحلة', url: '/captain/rides/new-ride', icon: 'add-circle' },
     { title: 'محفظتي', url: '/folder/Archived', icon: 'wallet' },
     { title: 'تفضيلاتي', url: '/captain/favorite', icon: 'heart' },
-    { title: 'سيارتي', url: '/folder/Spam', icon: 'car' },
+    { title: 'سيارتي', url: '/captain/cars', icon: 'car' },
     { title: 'الملف الشخصي', url: '/folder/Spam', icon: 'folder' },
     { title: 'العضوية و التقييم', url: '/folder/Spam', icon: 'star' },
     { title: 'الاعدادات', url: '/settings', icon: 'settings' },
@@ -52,6 +53,7 @@ export class AppComponent implements OnInit{
   ) {}
 
   ngOnInit(){
+    this.store.dispatch(autoLogin());
     this.authenticatedUser$ = this.store.select(getAuthenticatedUser);
     this.spinner$ = this.store.select(getLoadingSpinnerState)
     this.errorMessages$ = this.store.select(getErrorMessages)

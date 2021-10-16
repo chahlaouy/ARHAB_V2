@@ -10,6 +10,7 @@ export class User{
         private emailVerifiedAt: string,
         private createdAt: string,
         private updatedAt: string,
-        private userRole: string
+        private userRole: string,
+        private isActivated: boolean
     ){}
 }

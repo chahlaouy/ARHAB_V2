@@ -1,0 +1,344 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button>
+        <ion-icon name="notifications-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>{{ title }}</ion-title>
+    <ion-buttons slot="end">
+      <ion-menu-button>
+        <ion-icon name="apps" color="primary"></ion-icon>
+      </ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-item class="ion-margin-bottom ion-margin-top" lines="none">
+    <ion-icon name="car-sport" slot="start" size="small" color="dark"></ion-icon>
+    <ion-label>
+      <ul>
+        <li>
+          <div class="text-xl">{{title}}</div>
+        </li>
+        <li><span class="text-note">{{ subTitle }}</span></li>
+      </ul>
+    </ion-label>
+  </ion-item>
+
+  <!-- Begin announcement -->
+  <ion-card mode="ios">
+    <ion-card-header>
+      <ion-card-subtitle>
+        <ion-item>
+          <ion-icon name="navigate" slot="start" color="primary" class="text-note"></ion-icon>
+          <ion-label>
+            <div>
+              <div class="text-md">Mekkah, jeddah privince</div>
+              <div class="text-note">
+                نقطة الانطلاق
+              </div>
+            </div>
+          </ion-label>
+        </ion-item>
+      </ion-card-subtitle>
+      <ion-card-title>
+        <ion-item>
+          <ion-icon name="pin" slot="start" color="primary" class="text-note"></ion-icon>
+          <ion-label>
+            <div>
+              <div class="text-md">Riadh province</div>
+              <div class="text-note">
+                نقطة الوصول
+              </div>
+          </div>
+        </ion-label>
+        </ion-item>
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+
+      <div class="flex items-center ion-justify-content-between ion-margin-bottom ion-margin-top">
+        <span class="text-note">عدد المقاعد المتاحة</span>
+        <div class="badge"> 5 مقاعد</div>
+      </div>
+      <div class="flex items-center ion-justify-content-between ion-margin-bottom ion-margin-top">
+        <span class="text-note"> تاريخ الانطلاق</span>
+        <div class="badge">12/05 14:00</div>
+      </div>
+      <div class="flex items-center ion-justify-content-between ion-margin-top">
+        <div>
+          <div id="active_icon">
+            <ion-icon name="musical-note-outline" color="dark" class="text-lg"></ion-icon>
+          </div>
+          <div class="ion-text-center text-note ion-margin-top">
+            موسيقى
+          </div>
+        </div>
+
+        <div>
+          <div id="inactive_icon">
+            <ion-icon name="logo-no-smoking" color="dark" class="text-lg"></ion-icon>
+          </div>
+          <div class="ion-text-center text-note ion-margin-top">
+            التدخين
+          </div>
+        </div>
+
+        <div>
+          <div id="active_icon">
+            <ion-icon name="paw-outline" color="dark" class="text-lg"></ion-icon>
+          </div>
+          <div class="ion-text-center text-note ion-margin-top">
+            الحيوانات
+          </div>
+        </div>
+
+        <div>
+          <div id="inactive_icon">
+            <ion-icon name="chatbubbles-outline" color="dark" class="text-lg"></ion-icon>
+          </div>
+          <div class="ion-text-center text-note ion-margin-top">
+            دردشة
+          </div>
+        </div>
+
+      </div>
+    </ion-card-content>
+  </ion-card>
+  <ion-card mode="ios" color="primary">
+    <ion-card-header>
+      <ion-card-subtitle>
+        <ion-item class="ion-margin-bottom">
+          <ion-icon name="cash-outline" color="light" class="text-md-white" slot="start"></ion-icon>
+          <ion-label>
+            <span class="text-note-white">
+
+              سعر المقعد
+            </span>
+          </ion-label>
+        </ion-item>
+        
+      </ion-card-subtitle>
+      <ion-card-title class="ion-margin-top ion-text-center">
+        124 ريال
+      </ion-card-title>
+    </ion-card-header>
+  </ion-card>
+  <ion-button expand="block" size="large" color="warning" mode="ios">
+    مزيد التفاصيل
+  </ion-button>
+
+  <!-- End announcement -->
+  <!-- Begin announcement -->
+  <ion-card mode="ios">
+    <ion-card-header>
+      <ion-card-subtitle>
+        <ion-item>
+          <ion-icon name="navigate" slot="start" color="primary" class="text-note"></ion-icon>
+          <ion-label>
+            <div>
+              <div class="text-md">Mekkah, jeddah privince</div>
+              <div class="text-note">
+                نقطة الانطلاق
+              </div>
+            </div>
+          </ion-label>
+        </ion-item>
+      </ion-card-subtitle>
+      <ion-card-title>
+        <ion-item>
+          <ion-icon name="pin" slot="start" color="primary" class="text-note"></ion-icon>
+          <ion-label>
+            <div>
+              <div class="text-md">Riadh province</div>
+              <div class="text-note">
+                نقطة الوصول
+              </div>
+          </div>
+        </ion-label>
+        </ion-item>
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+
+      <div class="flex items-center ion-justify-content-between ion-margin-bottom ion-margin-top">
+        <span class="text-note">عدد المقاعد المتاحة</span>
+        <div class="badge"> 5 مقاعد</div>
+      </div>
+      <div class="flex items-center ion-justify-content-between ion-margin-bottom ion-margin-top">
+        <span class="text-note"> تاريخ الانطلاق</span>
+        <div class="badge">12/05 14:00</div>
+      </div>
+      <div class="flex items-center ion-justify-content-between ion-margin-top">
+        <div>
+          <div id="active_icon">
+            <ion-icon name="musical-note-outline" color="dark" class="text-lg"></ion-icon>
+          </div>
+          <div class="ion-text-center text-note ion-margin-top">
+            موسيقى
+          </div>
+        </div>
+
+        <div>
+          <div id="inactive_icon">
+            <ion-icon name="logo-no-smoking" color="dark" class="text-lg"></ion-icon>
+          </div>
+          <div class="ion-text-center text-note ion-margin-top">
+            التدخين
+          </div>
+        </div>
+
+        <div>
+          <div id="active_icon">
+            <ion-icon name="paw-outline" color="dark" class="text-lg"></ion-icon>
+          </div>
+          <div class="ion-text-center text-note ion-margin-top">
+            الحيوانات
+          </div>
+        </div>
+
+        <div>
+          <div id="inactive_icon">
+            <ion-icon name="chatbubbles-outline" color="dark" class="text-lg"></ion-icon>
+          </div>
+          <div class="ion-text-center text-note ion-margin-top">
+            دردشة
+          </div>
+        </div>
+
+      </div>
+    </ion-card-content>
+  </ion-card>
+  <ion-card mode="ios" color="primary">
+    <ion-card-header>
+      <ion-card-subtitle>
+        <ion-item class="ion-margin-bottom">
+          <ion-icon name="cash-outline" color="light" class="text-md-white" slot="start"></ion-icon>
+          <ion-label>
+            <span class="text-note-white">
+
+              سعر المقعد
+            </span>
+          </ion-label>
+        </ion-item>
+        
+      </ion-card-subtitle>
+      <ion-card-title class="ion-margin-top ion-text-center">
+        124 ريال
+      </ion-card-title>
+    </ion-card-header>
+  </ion-card>
+  <ion-button expand="block" size="large" color="warning" mode="ios">
+    مزيد التفاصيل
+  </ion-button>
+
+  <!-- End announcement -->
+  <!-- Begin announcement -->
+  <ion-card mode="ios">
+    <ion-card-header>
+      <ion-card-subtitle>
+        <ion-item>
+          <ion-icon name="navigate" slot="start" color="primary" class="text-note"></ion-icon>
+          <ion-label>
+            <div>
+              <div class="text-md">Mekkah, jeddah privince</div>
+              <div class="text-note">
+                نقطة الانطلاق
+              </div>
+            </div>
+          </ion-label>
+        </ion-item>
+      </ion-card-subtitle>
+      <ion-card-title>
+        <ion-item>
+          <ion-icon name="pin" slot="start" color="primary" class="text-note"></ion-icon>
+          <ion-label>
+            <div>
+              <div class="text-md">Riadh province</div>
+              <div class="text-note">
+                نقطة الوصول
+              </div>
+          </div>
+        </ion-label>
+        </ion-item>
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+
+      <div class="flex items-center ion-justify-content-between ion-margin-bottom ion-margin-top">
+        <span class="text-note">عدد المقاعد المتاحة</span>
+        <div class="badge"> 5 مقاعد</div>
+      </div>
+      <div class="flex items-center ion-justify-content-between ion-margin-bottom ion-margin-top">
+        <span class="text-note"> تاريخ الانطلاق</span>
+        <div class="badge">12/05 14:00</div>
+      </div>
+      <div class="flex items-center ion-justify-content-between ion-margin-top">
+        <div>
+          <div id="active_icon">
+            <ion-icon name="musical-note-outline" color="dark" class="text-lg"></ion-icon>
+          </div>
+          <div class="ion-text-center text-note ion-margin-top">
+            موسيقى
+          </div>
+        </div>
+
+        <div>
+          <div id="inactive_icon">
+            <ion-icon name="logo-no-smoking" color="dark" class="text-lg"></ion-icon>
+          </div>
+          <div class="ion-text-center text-note ion-margin-top">
+            التدخين
+          </div>
+        </div>
+
+        <div>
+          <div id="active_icon">
+            <ion-icon name="paw-outline" color="dark" class="text-lg"></ion-icon>
+          </div>
+          <div class="ion-text-center text-note ion-margin-top">
+            الحيوانات
+          </div>
+        </div>
+
+        <div>
+          <div id="inactive_icon">
+            <ion-icon name="chatbubbles-outline" color="dark" class="text-lg"></ion-icon>
+          </div>
+          <div class="ion-text-center text-note ion-margin-top">
+            دردشة
+          </div>
+        </div>
+
+      </div>
+    </ion-card-content>
+  </ion-card>
+  <ion-card mode="ios" color="primary">
+    <ion-card-header>
+      <ion-card-subtitle>
+        <ion-item class="ion-margin-bottom">
+          <ion-icon name="cash-outline" color="light" class="text-md-white" slot="start"></ion-icon>
+          <ion-label>
+            <span class="text-note-white">
+
+              سعر المقعد
+            </span>
+          </ion-label>
+        </ion-item>
+        
+      </ion-card-subtitle>
+      <ion-card-title class="ion-margin-top ion-text-center">
+        124 ريال
+      </ion-card-title>
+    </ion-card-header>
+  </ion-card>
+  <ion-button expand="block" size="large" color="warning" mode="ios">
+    مزيد التفاصيل
+  </ion-button>
+
+  <!-- End announcement -->
+
+</ion-content>

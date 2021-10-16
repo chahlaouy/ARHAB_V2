@@ -2,6 +2,7 @@ ion-toolbar{
     padding: 0px;
     --padding-top: 0px !important;
     --background: #fff !important;
+    border-bottom: 1px solid #ccc;
 }
 ion-content{
     --background: #f7f7f7;
@@ -77,4 +78,9 @@ div.outer-box{
 }
 .text-red{
     color: rgb(247, 65, 65);
+}
+.profile-img img{
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
 }

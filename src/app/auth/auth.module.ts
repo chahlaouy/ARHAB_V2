@@ -6,7 +6,6 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { IonicModule } from '@ionic/angular';
 import { EffectsModule } from '@ngrx/effects';
-import { AuthEffect } from './state/auth.effects';
 
 
 @NgModule({
@@ -15,7 +14,7 @@ import { AuthEffect } from './state/auth.effects';
     RegisterComponent
   ],
   imports: [
-    EffectsModule.forFeature([AuthEffect]),
+    EffectsModule.forFeature(),
     IonicModule,
     FormsModule,
     ReactiveFormsModule,

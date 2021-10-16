@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { Store } from '@ngrx/store';
+import { addCarStart } from '../../state/captain.actions';
+import { CaptainState } from '../../state/captain.state';
 
 @Component({
   selector: 'app-add-car',
@@ -39,6 +42,7 @@ export class AddCarComponent implements OnInit {
 
   constructor(
     private fb: FormBuilder,
+    private store: Store<CaptainState>
   ) { }
 
   ngOnInit() {
@@ -46,13 +50,17 @@ export class AddCarComponent implements OnInit {
   }
 
 
-  initializeForm(){
+  initializeForm(){ 
     this.userCar = this.fb.group({
       brand: "",
       model: "",
       state: "",
       serialNumber: "",
-      seatsNumber: ""
+      seatsNumber: "",
+      paperImg: "",
+      assuranceImg: "",
+      lisenceImg: "",
+      carImg: ""
     })
   }
 
@@ -64,9 +72,63 @@ export class AddCarComponent implements OnInit {
       }
     })
   }
+  
+  onCarImgChange(event) {
+  
+    if (event.target.files.length > 0) {
+      const file = event.target.files[0];
+      this.userCar.patchValue({
+        carImg: file
+      });
+    }
+  }
+  
+
+  onLisenceImgChange(event) {
+  
+    if (event.target.files.length > 0) {
+      const file = event.target.files[0];
+      this.userCar.patchValue({
+        lisenceImg: file
+      });
+    }
+  }
+  
+
+  onAssuranceImgChange(event) {
+  
+    if (event.target.files.length > 0) {
+      const file = event.target.files[0];
+      this.userCar.patchValue({
+        assuranceImg: file
+      });
+    }
+  }
+  
+
+  onPaperImgChange(event) {
+  
+    if (event.target.files.length > 0) {
+      const file = event.target.files[0];
+      this.userCar.patchValue({
+        paperImg: file
+      });
+    }
+  }
 
   onCarSubmit(){
-
+    const car: any = new FormData();
+    car.append('carImg', this.userCar.get('carImg').value);
+    car.append('lisenceImg', this.userCar.get('lisenceImg').value);
+    car.append('assuranceImg', this.userCar.get('assuranceImg').value);
+    car.append('paperImg', this.userCar.get('paperImg').value);
+    car.append('brand', this.userCar.get('brand').value);
+    car.append('model', this.userCar.get('model').value);
+    car.append('state', this.userCar.get('state').value);
+    car.append('serialNumber', this.userCar.get('serialNumber').value);
+    car.append('seatsNumber', this.userCar.get('seatsNumber').value);
+    console.log(car.getAll("carImg"))
+    this.store.dispatch(addCarStart({car}))
   }
 
 }

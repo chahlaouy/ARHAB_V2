@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  BACK_END_URL: "http://127.0.0.1:8000/api"
+  BACK_END_URL_API: "http://127.0.0.1:8000/api",
+  BACK_END_URL: "http://127.0.0.1:8100"
 };
 
 /*

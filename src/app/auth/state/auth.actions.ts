@@ -4,6 +4,7 @@ import { AuthenticatedUser } from "src/app/models/authenticated-user.model";
 export const LOGIN_START = "[auth page] login start";
 export const LOGIN_SUCCESS = "[auth page] login success";
 export const LOGIN_FAIL = "[auth page] login fail";
+export const AUTO_LOGIN = "[auth page] auto login";
 
 export const loginStart = createAction(LOGIN_START, props<{email: string, password: string}>());
 export const loginSuccess = createAction(LOGIN_SUCCESS ,
@@ -26,3 +27,5 @@ export const registerSuccess = createAction(REGISTER_SUCCESS ,
     props<{ authenticatedUser: AuthenticatedUser }>()
     );
 export const registerFail = createAction(REGISTER_FAIL);
+
+export const autoLogin = createAction(AUTO_LOGIN);

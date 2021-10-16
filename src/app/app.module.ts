@@ -15,6 +15,7 @@ import { LoadingSpinnerComponent } from './shared/components/loading-spinner/loa
 import { AppReducer } from './state/app.state';
 import { DisplayErrorComponent } from './shared/components/display-error/display-error.component';
 import { AgmCoreModule } from '@agm/core';
+import { AuthEffect } from './auth/state/auth.effects';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,7 @@ import { AgmCoreModule } from '@agm/core';
     IonicModule.forRoot(),
     AppRoutingModule,
     StoreModule.forRoot(AppReducer),
-    EffectsModule.forRoot([]),
+    EffectsModule.forRoot([AuthEffect]),
     StoreDevtoolsModule.instrument({
       maxAge: 25, // Retains last 25 states
       logOnly: environment.production, // Restrict extension to log-only mode

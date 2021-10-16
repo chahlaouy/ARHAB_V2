@@ -1,8 +1,8 @@
 import { Injectable } from "@angular/core";
 import { Actions, createEffect, ofType } from "@ngrx/effects";
 import { AuthService } from "../services/auth.service";
-import { loginStart, loginSuccess, registerStart, registerSuccess } from "./auth.actions";
-import { catchError, exhaustMap, map } from 'rxjs/operators'
+import { autoLogin, loginStart, loginSuccess, registerStart, registerSuccess } from "./auth.actions";
+import { catchError, exhaustMap, map, mergeMap } from 'rxjs/operators'
 import { setErrorMessages, setLoadingSpinner } from "src/app/shared/store/shared.actions";
 import { AppState } from "src/app/state/app.state";
 import { Store } from "@ngrx/store";
@@ -30,7 +30,8 @@ export class AuthEffect{
                 return this.authService.login(action.email, action.password).pipe(
                     map((responseJwt) => {
                         this.store.dispatch(setLoadingSpinner({status: false}));
-                        const authenticatedUser = this.formatResponse(responseJwt);
+                        const authenticatedUser = this.authService.formatResponse(responseJwt);
+                        this.authService.persistUser(authenticatedUser);
                         return loginSuccess({authenticatedUser})
                     })
                 )
@@ -49,7 +50,8 @@ export class AuthEffect{
                 return this.authService.register(action.username, action.email, action.password).pipe(
                     map((responseJwt) => {
                         this.store.dispatch(setLoadingSpinner({status: false}));
-                        const authenticatedUser = this.formatResponse(responseJwt);
+                        const authenticatedUser = this.authService.formatResponse(responseJwt);
+                        this.authService.persistUser(authenticatedUser);
                         return registerSuccess({authenticatedUser});
                     })
                 )
@@ -61,6 +63,15 @@ export class AuthEffect{
         )
     });
 
+    $autoLogin = createEffect(() => {
+        return this.actions$.pipe(
+            ofType(autoLogin),
+            mergeMap(action => {
+                const authenticatedUser = this.authService.getAuthenticatedUserFromLocalStorage();
+                return of(loginSuccess({authenticatedUser}));
+            })
+        )
+    })
     registerRedirect$ = createEffect(() => {
         return this.actions$.pipe(
             ofType(registerSuccess),
@@ -79,27 +90,5 @@ export class AuthEffect{
         )
     }, {dispatch: false});
 
-    formatResponse(responseJwt: ResponseJwt){
-        const user = new User(
-            responseJwt.user.id,
-            responseJwt.user.username,
-            responseJwt.user.email,
-            responseJwt.user.age,
-            responseJwt.user.gender,
-            responseJwt.user.phone,
-            responseJwt.user.email_verified_at,
-            responseJwt.user.created_at,
-            responseJwt.user.updated_at,
-            responseJwt.user.user_role
-        );
-        const expiresIn = new Date( new Date().getTime() + +responseJwt.expires_in * 1000);
-        
-        const authUser: AuthenticatedUser = {
-            user: user,
-            token: responseJwt.access_token,
-            tokenType: responseJwt.token_type,
-            expiresIn: expiresIn
-        }
-        return authUser
-    }
+    
 }

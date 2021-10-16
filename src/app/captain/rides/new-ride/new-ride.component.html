@@ -44,13 +44,13 @@
         <ion-icon name="navigate" slot="start" size="small" color="dark"></ion-icon>
         <ion-label>
           <ul>
-            <li>
+            <li> 
               <div class="text-lg">نقطة الانطلاق</div>
             </li>
             <li><span class="text-note">حدد نقطة الانطلاق</span></li>
             <li>
               <input (keydown.enter)="$event.preventDefault()" placeholder="نقطة الانطلاق" autocorrect="off"
-                autocapitalize="off" spellcheck="off" type="text" #search class="search-map">
+                autocapitalize="off" spellcheck="off" type="text" #source class="search-map">
             </li>
           </ul>
         </ion-label>
@@ -66,7 +66,7 @@
             <li><span class="text-note">حدد نقطة الوصول</span></li>
             <li>
               <input (keydown.enter)="$event.preventDefault()" placeholder="نقطة الوصول" autocorrect="off"
-                autocapitalize="off" spellcheck="off" type="text" #search class="search-map">
+                autocapitalize="off" spellcheck="off" type="text" #destination class="search-map text-dark">
             </li>
           </ul>
         </ion-label>
@@ -79,7 +79,7 @@
         </div>
         <hr>
         <div class="text-lg">
-          2 heures 5 min
+          {{rideAverageDuration.text}}
         </div>
       </div>
 
@@ -95,29 +95,40 @@
       </ion-card-subtitle>
     </ion-card-header>
     <ion-card-content>
-
-
+<!-- 
       <ion-item class="ion-margin-bottom">
         <ion-label class="ion-padding-bottom ion-padding-top">
           تاريخ الانطلاق
         </ion-label>
-        <ion-input type="date" class="ion-padding-bottom ion-padding-top"></ion-input>
+        <ion-input type="date" class="ion-padding-bottom ion-padding-top" [(ngModel)]="rideDate"></ion-input>
+      </ion-item> -->
+
+      <ion-item class="ion-margin-bottom" lines="none" details="false">
+        <ion-label>تاريخ الانطلاق</ion-label>
+        <ion-datetime displayFormat="DD MM YYYY" placeholder="تاريخ الانطلاق" class="ion-padding-bottom ion-padding-top" [(ngModel)]="rideDate"></ion-datetime>
+      </ion-item>
+
+      <ion-item class="ion-margin-bottom" lines="none" details="false">
+        <ion-label>ساعة الانطلاق</ion-label>
+        <ion-datetime displayFormat="HH:mm" placeholder="ساعة الانطلاق" lass="ion-padding-bottom ion-padding-top" [(ngModel)]="rideHour"></ion-datetime>
       </ion-item>
 
       <div class="ion-margin-bottom">
         <div class="text-note flex items-center ion-justify-content-between ion-padding-bottom ion-padding-top">
-          <span class="text-md">المسافة المحتملة</span>
+          <span class="text-md">المسافة</span>
           <div class="text-md">
-            0.0 كلم
+            {{rideDistance.text}}
+            
           </div>
         </div>
       </div>
 
       <div class="ion-margin-bottom">
         <div class="text-note flex items-center ion-justify-content-between ion-padding-bottom ion-padding-top">
-          <span class="text-md">السعر المتوقع</span>
+          <span class="text-md">السعر</span>
           <div class="text-md">
-            0.0 ريال
+            {{priceInRiyal}}
+            ريال
           </div>
         </div>
       </div>
@@ -127,9 +138,15 @@
           <span class="text-md">حدد سعر المقعد</span>
           <div class="text-md">
             <div class="flex items-center">
-              <span class="in-dec-button ion-margin-end">+</span>
-              <span class="price">124</span>
-              <span class="in-dec-button ion-margin-start">-</span>
+              <span 
+                class="in-dec-button ion-margin-end"
+                (click)="increasePrice()"
+                >+</span>
+              <span class="price">{{ridePrice}}</span>
+              <span 
+                class="in-dec-button ion-margin-start"
+                (click)="decreasePrice()"
+              >-</span>
             </div>
           </div>
         </div>
@@ -140,9 +157,15 @@
           <span class="text-md">عدد المقاعد المتاحة</span>
           <div class="text-md">
             <div class="flex items-center">
-              <span class="in-dec-button ion-margin-end">+</span>
-              <span class="price">3</span>
-              <span class="in-dec-button ion-margin-start">-</span>
+              <span 
+                class="in-dec-button ion-margin-end"
+                (click)="increaseNumberOfSeats()"
+                >+</span>
+              <span class="price">{{rideNumberOfSeats}}</span>
+              <span 
+                class="in-dec-button ion-margin-start"
+                (click)="decreaseNumberOfSeats()"
+              >-</span>
             </div>
           </div>
         </div>
@@ -150,16 +173,23 @@
 
       <ion-item class="ion-margin-bottom" lines="none">
         <ion-label class="ion-padding-bottom ion-padding-top">اختر السيارة</ion-label>
-        <ion-select class="ion-padding-bottom ion-padding-top">
+        <ion-select class="ion-padding-bottom ion-padding-top" [(ngModel)]="rideCarId">
           <ion-select-option value="" disabled selected>اختر السيارة</ion-select-option>
-          <ion-select-option value="">اختر السيارة</ion-select-option>
-          <ion-select-option value="" >اختر السيارة</ion-select-option>
+          <ion-select-option value="0">اختر السيارة</ion-select-option>
+          <ion-select-option value="1" >اختر السيارة</ion-select-option>
           
 
         </ion-select>
       </ion-item>
 
-      <ion-button class="ion-margin-top" type="submit" expand="block" size="large" color="light">
+      <ion-button 
+        class="ion-margin-top" 
+        type="submit" 
+        expand="block" 
+        size="large" 
+        color="light"
+        (click)="persistRide()"
+        >
         تأكيد
       </ion-button>
     </ion-card-content>
